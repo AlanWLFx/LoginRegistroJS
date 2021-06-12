@@ -2,6 +2,8 @@ body{
     background: linear-gradient(to right, #3f87a6, #9198e5);
 }
 
+
+
 #login, #registro{
     width: 50%;
     border: 1px solid black;
@@ -13,6 +15,6 @@ body{
     box-shadow: 10px 10px 10px 0px rgba(0,0,0,.5);
 }
 
-#link{
+#link, #salir{
     text-align: right;
 }
