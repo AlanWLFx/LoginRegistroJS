@@ -16,9 +16,20 @@ function login(e){
     let passwordVal = password.value;
 
     if(usuarioVal == '' || passwordVal == ''){
+        creaMensaje('Verifica tus datos', 'danger')
         return;
     } 
 
-    console.log('el valor para user es:' + usuarioVal);
-    console.log('el valor para pass es:' + passwordVal);
+    
+    if(localStorage.getItem('usuario')){
+        let objeto = JSON.parse(localStorage.getItem('usuario'));
+
+        if(usuarioVal == objeto.user &&passwordVal == objeto.pass){
+            creaMensaje('login correcto', 'success');
+        }else{
+            creaMensaje('Tu usuario no existe', 'danger')
+        }
+    }else{
+        creaMensaje('usuario no registrado', 'danger');
+    }
 }
