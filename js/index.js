@@ -30,7 +30,7 @@ function login(e){
             localStorage.setItem('sesion', 'activa');
 
             setTimeout(function(){
-                window.open('./inicio.html', '_sefl');
+                window.open('./inicio.html', '_self');
             }, 2000);
         }else{
             creaMensaje('Tu usuario no existe', 'danger')
