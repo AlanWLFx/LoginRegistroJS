@@ -26,6 +26,12 @@ function login(e){
 
         if(usuarioVal == objeto.user &&passwordVal == objeto.pass){
             creaMensaje('login correcto', 'success');
+
+            localStorage.setItem('sesion', 'activa');
+
+            setTimeout(function(){
+                window.open('./inicio.html', '_sefl');
+            }, 2000);
         }else{
             creaMensaje('Tu usuario no existe', 'danger')
         }
